@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingeniería de Software III - Proyectos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 100%;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 280px;
+            height: auto;
+            margin: 0 auto 30px;
+            display: block;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .description {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+
+        .projects-section {
+            margin-top: 40px;
+        }
+
+        .projects-title {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .project-card a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .project-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .project-desc {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        footer {
+            margin-top: 50px;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .logo {
+                width: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/images/logo-untdf.png" alt="UNTDF - Universidad Nacional de Tierra del Fuego" class="logo">
+        
+        <h1>Ingeniería de Software III</h1>
+        <p class="subtitle">Proyectos de Desarrollo</p>
+        
+        <p class="description">
+            Bienvenido al repositorio de proyectos desarrollados por estudiantes de la materia.
+            Aquí encontrarás los trabajos prácticos y desarrollos realizados durante la cursada.
+        </p>
+
+        <div class="projects-section">
+            <h2 class="projects-title">Proyectos Disponibles</h2>
+            
+            <div class="project-card">
+                <a href="/gpe2024">
+                    <div class="project-name">📦 GPE 2024</div>
+                    <div class="project-desc">Sistema Plan de Estudios - Ciclo 2024</div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="/mapa2025">
+                    <div class="project-name">📦 MAPA 2025</div>
+                    <div class="project-desc">Mapa de carreras - Ciclo 2025</div>
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p>Universidad Nacional de Tierra del Fuego - Ingeniería de Software III © <span id="year"></span></p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
